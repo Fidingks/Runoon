@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>菜鸟教程 - 学的不仅是技术，更是梦想！</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="w3cschool,HTML,CSS,PHP,DOM,JavaScript,jQuery,XML,AJAX,ASP.NET,W3C,MySQL,SQL,jquery mobile,bootstrap,Python,jquery easyui,jquery ui,angularjs">
+        <meta name="description" content="菜鸟教程(www.runoob.com)提供了编程的基础技术教程, 介绍了HTML、CSS、Javascript、Python，Java，Ruby，C，PHP , MySQL等各种编程语言的基础知识。 同时本站中也提供了大量的在线实例，通过实例，您可以更好的学习编程。..">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="https://static.runoob.com/images/favicon.ico">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="apple-touch-icon" href="https://static.runoob.com/images/icon/mobile-icon.png"/>
+  </head>
+  <style>
+    .head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #search {
+      margin-right: 10px;
+      min-width: 80px;
+      width: 600px;
+      height: 50px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgb(110, 110, 110);
+      font-size: 1.5em;
+      padding-left: 10px;
+      color: rgb(46, 46, 46);
+      margin-right: 52px;
+    }
+  
+    .selection {
+      background-color: rgb(155, 185, 127);
+      height: 50px;
+      display: flex;
+      align-items: center;
+    }
+    .menu {
+      color: rgb(255, 255, 255);
+      font-size: 25px;
+      margin: 20px;
+      top: 10px;
+    }
+    .menu:hover {
+      color: rgb(216, 213, 213);
+      font-size: 25px;
+      margin: 20px;
+      top: 10px;
+    }
+    .major {
+      display: flex;
+      margin-top: 20px;
+    }
+    .navi {
+      width: 250px;
+      margin-right: 40px;
+      height: 720px;
+      overflow-y: auto;
+    
+    }
+    .navititle {
+      height: 45px;
+      display: flex;
+      align-items: center;
+      margin-left: 0px;
+      font-size: 23px;
+      background-color: rgb(234, 237, 240);
+      
+    }
+    #quanbujiaocheng {
+      color: rgb(139, 167, 113);
+      margin-left: 10px;
+    }
+
+    .navi_a {
+      display: flex;
+      align-items: center;
+      font-size: large;
+      margin-left: 10px;
+      height: 60px;
+ border-bottom: solid rgb(233, 233, 233) 1px;
+ width: 90%;
+    }
+    .run {
+      width: 20px;
+      height: 20px;
+      margin-right: 15px;
+    }
+    .content {
+      width: 79%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+  
+    }
+    .container {
+      background-color: rgb(255, 255, 255);
+      width: 98%;
+      margin: 10px;
+     
+    }
+    #img_menu{
+      width: 27px;
+    }
+    .contitle {
+      font-size: 25px;
+      color: rgb(0, 0, 0);
+      font-weight: 800;
+      border-bottom: 1px solid rgb(219, 216, 216);
+
+      margin-top: 15px;
+      margin-left: 20px;
+      height: 40px;
+      width: 1550px;
+    }
+
+    .smabox {
+      background-color: rgb(248, 246, 246);
+      width: 30%;
+      margin-right: 0px;
+      margin-bottom: 10px;
+      margin-top: 15px;
+      margin-left: 20px;
+      height: 130px;
+      border-radius: 10px;
+    }
+    .smabox:hover{
+      background-color: rgb(228, 223, 223);
+      width: 30%;
+      margin-right: 0px;
+      margin-bottom: 10px;
+      margin-top: 15px;
+      margin-left: 20px;
+      height: 130px;
+      border-radius: 10px;
+    }
+
+    .smabox img {
+      margin-left: 40px;
+      width: 50px;
+      height: 50px;
+      /* background-color: aquamarine; */
+    }
+    .smatitle {
+      margin: 20px 30px 0px 30px;
+      /* background-color: aquamarine; */
+      color: rgb(139, 167, 113);
+      font-size: 23px;
+      font-weight: 800;
+      width: 100%;
+      height: 40px;
+    }
+    .introduction {
+      width: 320px;
+      margin-left: 17px;
+      margin-top: 0px;
+      margin-bottom: 30px;
+      font-size: 17px;
+      font-weight: 600;
+      color: rgb(62, 63, 63);
+    }
+    .mg8 {
+      margin: 2px;
+    }
+    .bor {
+      border: solid rgb(240, 240, 240) 1px;
+    }
+    body {
+      font-family: sans-serif;
+      background-color: rgb(225, 229, 233);
+    }
+    .c {
+      background-color: rgb(255, 255, 255);
+    }
+    .flex {
+      display: flex;
+    }
+    .f_justify {
+      /* justify-content: space-between; */
+      display: flex;
+      flex-wrap: wrap;
+    }
+  </style>
+  <body>
+    <div class="head bor mg8 c">
+      <a id="logo">
+        <img src="https://tucdn.wpon.cn/2023/07/19/0143d3ad41136.png" />
+      </a>
+
+      <input type="text" id="search" placeholder="docker" />
+    </div>
+    <div class="selection bor mg8">
+      <a class="menu">首页</a>
+      <a class="menu">菜鸟工具</a>
+      <a class="menu">菜鸟笔记</a>
+      <a class="menu">参考手册</a>
+      <a class="menu">用户笔记</a>
+      <a class="menu">测验/考试</a>
+      <a class="menu">本地书签</a>
+    </div>
+    <div class="major ">
+      <div class="navi bor c">
+        <div class="navititle">
+          <b id="quanbujiaocheng">≡全部教程</b>
+        </div>
+        <div class="navi_a">
+          <img
+            class="run"
+            src="https://s1.locimg.com/2023/07/19/ab90352fdbf1d.png"
+          />HTML/CSS<br />
+        </div>
+        <div class="navi_a">
+          <img
+            class="run"
+            src="https://s1.locimg.com/2023/07/19/ab90352fdbf1d.png"
+          />JavaScript<br />
+        </div>
+        <div class="navi_a">
+          <img
+            class="run"
+            src="https://s1.locimg.com/2023/07/19/ab90352fdbf1d.png"
+          />服务端<br />
+        </div>
+        <div class="navi_a">
+          <img
+            class="run"
+            src="https://s1.locimg.com/2023/07/19/ab90352fdbf1d.png"
+          />数据库<br />
+        </div>
+        <div class="navi_a">
+          <img
+            class="run"
+            src="https://s1.locimg.com/2023/07/19/ab90352fdbf1d.png"
+          />数据分析<br />
+        </div>
+        <div class="navi_a">
+          <img
+            class="run"
+            src="https://s1.locimg.com/2023/07/19/ab90352fdbf1d.png"
+          />移动端<br />
+        </div>
+        <div class="navi_a">
+          <img
+            class="run"
+            src="https://s1.locimg.com/2023/07/19/ab90352fdbf1d.png"
+          />XML教程<br />
+        </div>
+        <div class="navi_a">
+          <img
+            class="run"
+            src="https://s1.locimg.com/2023/07/19/ab90352fdbf1d.png"
+          />ASP.NET<br />
+        </div>
+        <div class="navi_a">
+          <img
+            class="run"
+            src="https://s1.locimg.com/2023/07/19/ab90352fdbf1d.png"
+          />Web Service<br />
+        </div>
+        <div class="navi_a">
+          <img
+            class="run"
+            src="https://s1.locimg.com/2023/07/19/ab90352fdbf1d.png"
+          />开发工具<br />
+        </div>
+        <div class="navi_a">
+          <img
+            class="run"
+            src="https://s1.locimg.com/2023/07/19/ab90352fdbf1d.png"
+          />网站建设<br />
+        </div>
+      </div>
+
+      <div class="content mg8 bor c">
+        <!-- 这里是HTML&CSS -->
+        <div class="container f_justify c">
+          <div class="contitle">
+            <img id="img_menu" src="https://s1.locimg.com/2023/07/20/3909b3445203a.png"/>HTML / CSS</div>
+
+          <div class="smabox f_justify">
+            <div class="smatitle">【学习HTML】</div>
+            <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+            <div class="introduction">
+              HTML ,即超文本标记语言（Hyper Text Markup Language）
+            </div>
+          </div>
+          <div class="smabox f_justify">
+            <div class="smatitle">【学习HTML5】</div>
+            <img src="https://s1.locimg.com/2023/07/20/442a6ff1879d8.png" />
+            <div class="introduction">
+              HTML5是下一代HTML标准
+            </div>
+          </div>
+          <div class="smabox f_justify">
+            <div class="smatitle">【学习CSS】</div>
+            <img src="https://s1.locimg.com/2023/07/20/a78852f407133.png" />
+            <div class="introduction">
+              层叠样式表（Cascading StyleSheet）
+            </div>
+          </div>
+          <div class="smabox f_justify">
+            <div class="smatitle">【学习CSS3】</div>
+            <img src="https://s1.locimg.com/2023/07/20/3d8f30c3899aa.png" />
+            <div class="introduction">
+              CSS3是CSS技术的升级版本
+            </div>
+          </div>
+          <div class="smabox f_justify">
+            <div class="smatitle">【学习HBootstrap3】</div>
+            <img src="https://s1.locimg.com/2023/07/20/bc0ff8ac72a01.png" />
+            <div class="introduction">
+             Bootstrap，来自Twitter，是目前最受欢迎的前端框架
+            </div>
+          </div>
+          <div class="smabox f_justify">
+            <div class="smatitle">【学习Bootstrap4】</div>
+            <img src="https://s1.locimg.com/2023/07/20/c749b5dfebfa4.png" />
+            <div class="introduction">
+Bootstap4的前端框架
+            </div>
+          </div>
+          <div class="smabox f_justify">
+            <div class="smatitle">【学习Bootstrap5】</div>
+            <img src="https://s1.locimg.com/2023/07/20/508431acf811b.png" />
+            <div class="introduction">
+ Bootstrap5是Bootstrap的最新版本
+            </div>
+          </div>
+          <div class="smabox f_justify">
+            <div class="smatitle">【学习Font Awsome】</div>
+            <img src="https://s1.locimg.com/2023/07/20/4a6c338e0d7c3.png" />
+            <div class="introduction">
+Font Awesome 是一套绝佳的图标字体库和CSS框架
+            </div>
+          </div>
+          <div class="smabox f_justify">
+            <div class="smatitle">【学习Foundation】</div>
+            <img src="https://s1.locimg.com/2023/07/20/0e9d91fd31f57.png" />
+            <div class="introduction">
+Foundation用于开发响应式的HTML，CSS and JavaScript 框架            </div>
+          </div>
+          
+     <!-- 这里是JavaScript -->
+      </div>
+      <div class="container f_justify c">
+        <div class="contitle">
+          <img id="img_menu" src="https://s1.locimg.com/2023/07/20/3909b3445203a.png"/>JavaScript</div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习JavaScript】</div>
+          <img src="https://s1.locimg.com/2023/07/20/f3cefc93cdced.png" />
+          <div class="introduction">
+            JavaScript 是 Web 的编程语言
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 HTML DOM】</div>
+          <img src="https://s1.locimg.com/2023/07/20/09f0075e47139.png" />
+          <div class="introduction">
+            HTML DOM 定义了访问和操作HTML文档的标准方法
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习jQuery】</div>
+          <img src="https://s1.locimg.com/2023/07/20/101935c5c3ddc.png" />
+          <div class="introduction">
+            jQuery是一个JavaScript 库
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习AngularJS】</div>
+          <img src="https://s1.locimg.com/2023/07/20/c59cba543913b.png" />
+          <div class="introduction">
+            AngularJS 通过新的属性和表达式扩展了HTML
+          </div>
+        </div>
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习AngularJS2】</div>
+          <img src="https://s1.locimg.com/2023/07/20/9f946593cfb32.png" />
+          <div class="introduction">
+            AngularJS2是一款JavaScript库，由Google维护
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习Vue.js】</div>
+          <img src="https://s1.locimg.com/2023/07/20/61f591ebdcd3e.png" />
+          <div class="introduction">
+            Vue.jss是一套构建用户界面的渐进式框架
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习Vue3】</div>
+          <img src="https://s1.locimg.com/2023/07/20/61f591ebdcd3e.png" />
+          <div class="introduction">
+            Vue是一套构建用户界面的渐进式框架。
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习React】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            React是一个用于构建用户界面的JAVASCRIPT库
+          </div>
+        </div>
+        
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习TypeScripy】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            TypeScript是 JavaScrpt的一个超集，支持ECMAScript6标准
+          </div>
+        </div>
+        
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习jQuery UI】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            jQuery UI是建立在jQuery上的一组用户界面交互、特效、小组件及主题
+          </div>
+        </div>
+   
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习jQuery EasyUI】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            jQuery EasyUI 是一个基于jQuery的框架，集成了各种用户界面插件
+          </div>
+        </div>
+
+        
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习Node.js】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            Node.js 是运行在服务端的JavaScript
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习AJAX】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            AJAX = Asynchronous JavaScript and XML (异步的 JavaScript 和 XML)
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习JSON】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            JSON是储存和交换文本信息的语法
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习Echarts】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            ECharts是一个使用JavaScript实现的开元可视化库
+          </div>
+        </div>
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习Chart.js】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            Chart.js是一个简单、灵活的JavaScript 图标工具
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习Highcharts】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            Highcharts 是一个用纯JavaScript编写的一个图表库
+          </div>
+        </div>
+
+        
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习Google地图】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            Google地图的接口使用说明
+          </div>
+        </div>
+      </div>
+
+      <!-- 这里是服务端 -->
+      <div class="container f_justify c">
+        <div class="contitle">
+          <img id="img_menu" src="https://s1.locimg.com/2023/07/20/3909b3445203a.png"/>服务端</div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习Python】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            Python3.x 版本，未来主流版本
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 Python2.x 】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            Python 是一种面向对象、解释型计算机程序设计语言
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 Linux】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            Linux是一套免费使用和自由传播的类Unix操作系统
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 Docker】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            Docker 是一个开源的应用容器引擎，基于Go语言
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 Ruby】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            一直为简单快捷的面向对象编程(面向对象程序设计)而创建的脚本语言
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 Java】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            一种可以转写跨平台应用软件的面向对象的程序设计语言
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 C】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            一种通用计算机编程语言
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 C++】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            C++是在C语言的基础上开发的一种通用编程语言
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 Perl】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            Perl是高级、通用、直译式、动态的程序语言
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 Servlet】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            运行在Web服务器或应用服务器上的程序
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 JSP】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            JSP与PHP、ASP、ASP.NEt等语言类似，运行在服务端的语言
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 Lua】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            Lua是一种轻量小乔的脚本语言，用标准C语言编写并以源代码形式开放
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 Rust】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            Rust语言是一种高效、可靠的通用高级语言
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 Scala】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            Scala是一门多范式（multi-paradigm）的编程语言
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 Go】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            Go语言是谷歌推出的一种全新的编程语言
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 PHP】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+             PHP是一种通用开源脚本语言
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【数据结构与算法】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            数据结构是计算机中储存、组织数据的方式
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 Django】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            Django是一个开放源代码的Web应用框架，由Python写成
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 Zookeeper】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            Zookeeper是一个分布式的，开放源码的分布式应用程序协调服务
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【设计模式】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            设计模式代表了最佳的实践，通常被有经验的面向对象的软件开发人员所采用。
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【正则表达式】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            正则表达式是对字符串操作的一种逻辑公式
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 Maven】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            Maven是一个项目管理工具，可以对Java项目进行构建、依赖管理。
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 Verilog】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            Verilog是一种用于设计数字电路的硬件描述语言，主要应用在集成电路系统中
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 ASP】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+             ASP（Active SErver Pages动态服务器页面—）是一种生成动态交互性网页的强有力工具
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 AppML】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+             APPML是一个为web应用程序设计的html扩展框
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 VBScript】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            一种微软环境下的轻量级解释型语言
+          </div>
+        </div>
+
+
+
+
+<!-- 数据库 -->
+<div class="container f_justify c">
+  <div class="contitle">
+    <img id="img_menu" src="https://s1.locimg.com/2023/07/20/3909b3445203a.png"/>数据库</div>
+<div class="smabox f_justify">
+          <div class="smatitle">【学习 SQl】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            结构化查询语言（Structured Query Language）
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 MySQL】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            MySQl是一个关系型数据库管理系统
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 PostgraeSQl】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+           PotsgreSQL 是一个免费的对象关系数据库服务器（ORDBMS）
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 SQLite】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            一款轻型的数据库
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 MongoDB】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            Mongo DB 是目前在IT行业非常流行的一种非关系型数据库（NoSql）
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 Redis】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            一个高性能的key-value数据库
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 Memcached】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            Memcached是一个自由开源的高性能分布式内存，对象缓存系统
+          </div>
+        </div>
+
+
+
+
+          <div class="contitle">
+            <img id="img_menu" src="https://s1.locimg.com/2023/07/20/3909b3445203a.png"/>数据分析</div>
+
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 Python】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            Python3.x版本，未来主流版本
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 NumPy】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            NumPy是Python 语言的一个扩展程序库，支持大量的维度数组与矩阵运算
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 Pandas】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+             Pandas 是 Python 语言的一个扩展程序库，用于数据分析
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 Matplotlib】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+           Matplotlib 是Python的绘图库
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 Scipy】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            Scipy是一个开源的Python算法库和数学工具包
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 R】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            R语言是为数学研究工作者设计的一种数学编程语言
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 Julia】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            Julia是一个面向科学计算的高性能动态高级程序设计语言
+          </div>
+        </div>
+
+
+        <!-- 移动端 -->
+          <div class="contitle">
+            <img id="img_menu" src="https://s1.locimg.com/2023/07/20/3909b3445203a.png"/>移动端</div>
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 Android】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            Android 是一种基于Linux的自由及开放源代码的操作系统，主要使用于移动设备
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 Swift】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+             Swift是一种支持多编程范式和编译式的编程语言，用于开发iOS ，OS X和watchOS应用程序
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 jQuery Mobile】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            jQuery Mobile 在手机上和平板设备上的版本
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 ionic】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            ionic是一个强大的HTML5应用程序开发框架（HTML5 Hybrid Mobile App Framework）。
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 Kotlin】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            在Java虚拟机上运行的静态类型编程语言，Android官方开发语言
+          </div>
+        </div>
+
+
+
+        <!-- XML教程 -->
+          <div class="contitle">
+            <img id="img_menu" src="https://s1.locimg.com/2023/07/20/3909b3445203a.png"/>XML教程</div>
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 XMl】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+             XML被设计用来传输和储存数据
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 DTD】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+             DTD(文档类型定义)的作用是定义 XML文档的合法构建模块
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 XML DOM】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+             XML DOM定义访问和操作XML文档的标准方法
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 XSLT】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+             XSL是一个XML文档的样式表语言,XSLT指XSL转换
+          </div>
+        </div>
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 XPath】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            XPath 是一门在XML文档中查找信息的语言
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 XQuery】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            XQuery被设计用来查询XML数据
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 XLink】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            XLinl定义在XML文档中创建超级链接的标准方法
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 XPointer】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            XPointer是在可扩张标志语言（XML）文件汇总定位数据的一种语言
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 XML Schema】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            XML Schema 描述了XML文档的结构
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 XSL-Fo】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            XSL-FO 指可扩展样式表语言格式化对象
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 SVG】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            SVG使用XML故事定义图像
+          </div>
+        </div>
+
+
+
+
+        <!-- ASP.NET -->
+          <div class="contitle">
+            <img id="img_menu" src="https://s1.locimg.com/2023/07/20/3909b3445203a.png"/>ASP.NET</div>
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 ASP.NET】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            ASP.NET是一个使用HTML、CSS、JavaScript和服务器脚本创建网页和王者开发框架
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 C#】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            C#是一个简单的、现代的、通用的、面向对象的编程语言
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 Web Pages】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            Web Pages 是三种网页编程模型中的一种，用于创建网页和web应用程序
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 Razor】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            Razor 是一种标记语法，可以让您将基于服务器的代码（Visual Basic和C#）嵌入到网页中
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 MVC】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            MVC（Model View Controller模型-视图-控制器）
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 Web Forms】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            Web Forms是三中创建AASP.NET网站和Web应用程序的编程模式hid一种
+          </div>
+        </div>
+
+
+
+        <!-- Web Service -->
+          <div class="contitle">
+            <img id="img_menu" src="https://s1.locimg.com/2023/07/20/3909b3445203a.png"/>Web Service</div>
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 Web Service】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            Web Service 脚本平台需支持XML+HTTp
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 WSDL】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            WSDL是一门基于XML的语言，用于描述Web Service以及如何对它们进行访问
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 SOAP】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            SOAP是一直简单的基于XML的协议，它使应用程序通过HTTP来交换信息
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 RSS】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            RSS基于XML标准，在互联网上被广泛采用的内容包装和投递协议
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 RDF】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            DF（资源描述框架）是描述网络资源的W3C标准
+          </div>
+        </div>
+
+
+
+        <!-- 开发工具 -->
+          <div class="contitle">
+            <img id="img_menu" src="https://s1.locimg.com/2023/07/20/3909b3445203a.png"/>开发工具</div>
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 Ecliose】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            Eclipse是一个开放源代码的、基于Java的可扩展开发平台
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 Git】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            Git是一个开源的分布式版本控制系统，用于敏姐高效地处理任何或小或大的项目
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 SVn】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            Svn是一个开放源代码的版本控制系统
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 Markdown】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            Markdown是一种轻量级标记语言
+          </div>
+        </div>
+
+
+
+        <!-- 网站建设 -->
+          <div class="contitle">
+            <img id="img_menu" src="https://s1.locimg.com/2023/07/20/3909b3445203a.png"/>网站建设</div>
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习 HTTP】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            HTTP协议（HyperText Transfer Protocol，超文本传输协议）是因特网上应用最广泛的一种网
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【网站建设指南 】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            网站建设指导课程
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【浏览器信息】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            对于网站开发人员来说，浏览器的信息和统计数据都是非常重要的
+          </div>
+        </div>
+        <div class="smabox f_justify">
+          <div class="smatitle">【网站主机教程 】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            如果您希望向全世界发布自己的网站，那么你的网站就需要被放置于一个WEB服务器
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习TCP/IP】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            TCP/IP是因特网的通信协议
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【学习W3C 】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            W3C让每个人都能在互联网上分享资源
+          </div>
+        </div>
+
+        <div class="smabox f_justify">
+          <div class="smatitle">【网站品质 】</div>
+          <img src="https://s1.locimg.com/2023/07/19/98a85bd7f9176.png" />
+          <div class="introduction">
+            学习如何创建高质量的web网站
+          </div>
+        </div>
+
+        
+    </div>
+    
+      
+    </div>
+  </body>
+</html>
